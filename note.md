@@ -4,10 +4,19 @@ Using angular cli to generate new component like below:
 ```sh
 ng g c course
 ```
-`g` for generate shotcut.
+`g` for generate shortcut.
 
-`c` for component shotcut.
+`c` for component shortcut.
 
 Dependency Injection like **"A 25-dollar term for a 5-cent concept!"**
 
 If use the DI by angular that meaing all registed DI instances will be `Singleton` instances.
+
+Using angular cli to generate new service usage below:
+```sh
+ng g s email
+```
+
+`g` for generate shortcut.
+
+`s` for service shortcut.
