@@ -1,0 +1,1 @@
+Install `auto import` pluging to auto import class.
