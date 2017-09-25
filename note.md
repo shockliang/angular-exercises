@@ -8,6 +8,8 @@ ng g c course
 
 `c` for component shortcut.
 
+---
+#### Dependency Injection ####
 Dependency Injection like **"A 25-dollar term for a 5-cent concept!"**
 
 If use the DI by angular that meaing all registed DI instances will be `Singleton` instances.
@@ -20,3 +22,17 @@ ng g s email
 `g` for generate shortcut.
 
 `s` for service shortcut.
+
+---
+#### Interpolation ####
+```html
+<img src="{{ imageUrl }}" />
+```
+
+---
+#### Property bind ####
+```html
+<img [src]="imageUrl" />
+```
+
+
