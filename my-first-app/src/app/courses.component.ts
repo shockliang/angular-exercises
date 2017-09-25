@@ -4,14 +4,14 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'courses', // css selector or customerize html markup
     template: `
-        <button class="btn btn-primary">Save</button>
+        <button class="btn btn-primary" [class.active]="isActive">Save</button>
     `
 
 })
 
 export class CoursesCompoent {
     title = "List of courses";
-    imageUrl = "http://lorempixel.com/400/200";
+    isActive = true;
     courses;
 
     constructor(service: CoursesService) {
