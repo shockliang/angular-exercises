@@ -1,15 +1,16 @@
-import { CoursesService } from './../courses.service';
 import { Component } from '@angular/core';
 
 @Component({
     selector: 'courses', // css selector or customerize html markup
     template: `
-        <input #email (keyup.enter)="onKeyUp(email.value)" />
+        <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
     `
 })
 
 export class CoursesCompoent {
-    onKeyUp(email) {
-        console.log(email);
+    email = "abc@abc.com"
+
+    onKeyUp() {
+        console.log(this.email);
     }
 }
