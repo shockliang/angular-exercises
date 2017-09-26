@@ -4,21 +4,12 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'courses', // css selector or customerize html markup
     template: `
-        <div (click)="onDivClicked()">
-            <button (click)="onSave($event)">Save</button>
-        </div>
+        <input (keyup.enter)="onKeyUp()" />
     `
 })
 
 export class CoursesCompoent {
-    
-    onDivClicked() {
-        console.log('Div was clicked');
+    onKeyUp() {
+        console.log("Enter was pressed");
     }
-
-    onSave($event) {
-        console.log('Button was clicked', $event);
-        $event.stopPropagation(); // Stop event bubbling
-    }
-    
 }
