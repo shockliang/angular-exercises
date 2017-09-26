@@ -4,12 +4,12 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'courses', // css selector or customerize html markup
     template: `
-        <input (keyup.enter)="onKeyUp()" />
+        <input #email (keyup.enter)="onKeyUp(email.value)" />
     `
 })
 
 export class CoursesCompoent {
-    onKeyUp() {
-        console.log("Enter was pressed");
+    onKeyUp(email) {
+        console.log(email);
     }
 }
