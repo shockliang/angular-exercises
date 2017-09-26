@@ -4,11 +4,21 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'courses', // css selector or customerize html markup
     template: `
-        <button [style.backgroundColor]="isActive ? 'blue' : 'white' ">Save</button>
+        <div (click)="onDivClicked()">
+            <button (click)="onSave($event)">Save</button>
+        </div>
     `
 })
 
 export class CoursesCompoent {
-    isActive = true;
+    
+    onDivClicked() {
+        console.log('Div was clicked');
+    }
+
+    onSave($event) {
+        console.log('Button was clicked', $event);
+        $event.stopPropagation(); // Stop event bubbling
+    }
     
 }
