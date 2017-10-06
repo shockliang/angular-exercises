@@ -4,7 +4,6 @@ import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } fro
   selector: 'favorite',
   templateUrl: './favorite.component.html',
   styleUrls: ['./favorite.component.css'],
-  encapsulation: ViewEncapsulation.Emulated
 })
 export class FavoriteComponent {
   @Input('is-favorite') isFavorite: boolean;
