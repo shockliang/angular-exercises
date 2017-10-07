@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-like',
+  selector: 'like',
   templateUrl: './like.component.html',
   styleUrls: ['./like.component.css']
 })
-export class LikeComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+export class LikeComponent {
+  @Input('isActive') isActive: boolean;
+  @Input('likesCount') likesCount: number;
+  
+  onClick() {
+    this.likesCount += (this.isActive) ? -1 : 1;
+    this.isActive = !this.isActive;
   }
-
 }
