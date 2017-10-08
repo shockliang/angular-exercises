@@ -23,6 +23,15 @@ ng g s email
 
 `s` for service shortcut.
 
+Create custom directive using angular cli.
+```sh
+ng g d input-format
+```
+
+`g` for generate shortcut.
+
+`d` for directive shortcut.
+
 ---
 #### Interpolation ####
 ```html
@@ -34,5 +43,3 @@ ng g s email
 ```html
 <img [src]="imageUrl" />
 ```
-
-
