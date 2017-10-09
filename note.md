@@ -43,3 +43,14 @@ ng g d input-format
 ```html
 <img [src]="imageUrl" />
 ```
+---
+#### Reactive form ####
+* More control over validation logic
+* Good for complex forms
+* Unit testable
+
+#### Template-driven form ####
+* Good for simple forms
+* Simple validation
+* Easier to create
+* Less code
