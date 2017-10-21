@@ -1,3 +1,4 @@
+import { SignupFormComponent } from './signup-form/signup-form.component';
 import { SummaryPipe } from './summary.pipe';
 import { CoursesService } from './../courses.service';
 import { CoursesCompoent } from './courses.component';
@@ -27,7 +28,8 @@ import { CourseFormComponent } from './course-form/course-form.component';
     InputFormatDirective,
     ZippyComponent,
     ContactFormComponent,
-    CourseFormComponent
+    CourseFormComponent,
+    SignupFormComponent
   ],
   imports: [
     BrowserModule,
