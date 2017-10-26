@@ -1,3 +1,4 @@
+import { BadInput } from './../common/bad-input';
 import { NotFoundError } from './../common/not-found-error';
 import { AppError } from './../common/app-error';
 import { PostService } from './../services/post/post.service';
@@ -38,9 +39,9 @@ export class PostsComponent implements OnInit {
         this.posts.splice(0, 0, post);
         console.log(response.json());
       },
-      (error: Response) => {
-        if (error.status === 400) {
-          // this.form.setErrors(error.json());
+      (error: AppError) => {
+        if (error instanceof BadInput) {
+          //this.form.setErrors(error.originalError);
         } else {
           alert('An unexpected error occured.');
           console.log(error);
