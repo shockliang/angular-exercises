@@ -1,0 +1,9 @@
+<h1>My Followers</h1>
+<ul class="list-group">
+  <li
+    *ngFor="let follower of followers" 
+    class="list-group-item">
+    
+    {{ follower.login }}
+  </li>
+</ul>
