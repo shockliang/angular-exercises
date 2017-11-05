@@ -12,7 +12,7 @@ export class AuthService {
       .map(response => {
         let result = response.json();
         console.log(result);
-        
+
         if (result && result.token) {
           localStorage.setItem('token', result.token);
           return true;
@@ -23,6 +23,7 @@ export class AuthService {
   }
 
   logout() {
+    localStorage.removeItem('token');
   }
 
   isLoggedIn() {
