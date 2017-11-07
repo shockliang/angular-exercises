@@ -54,3 +54,26 @@ ng g d input-format
 * Simple validation
 * Easier to create
 * Less code
+
+---
+#### Optimization Techniques ####
+* Minification
+    * Remove unnecessary white space.
+* Uglification
+    * Shorten the variable name or method name.
+* Bundling
+* Dead code elimination
+    * Remove unnecessary classes or packages.
+* Ahead-of-time (AOT) compilation
+
+#### Just in time (JIT) Compilation ####
+* Inefficient for production.
+* Happens for every user
+* More components, slower
+* We have to ship Angular compiler
+
+#### Benefits of Ahead-of-time(AOT) Compilation ####
+* Faster startup
+* Doesn't need ship Angular compiler that make smaller bundle size.
+* Catch template errors earlier. 
+* Better security
