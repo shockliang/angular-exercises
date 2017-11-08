@@ -75,5 +75,19 @@ ng g d input-format
 #### Benefits of Ahead-of-time(AOT) Compilation ####
 * Faster startup
 * Doesn't need ship Angular compiler that make smaller bundle size.
-* Catch template errors earlier. 
+* Catch template errors earlier.
 * Better security
+
+---
+
+#### Lint ####
+
+Using the command to showing all errors.
+```sh
+ng lint
+```
+
+Using the command to auto fix all lint errors.
+```sh
+ng lint --fix
+```
