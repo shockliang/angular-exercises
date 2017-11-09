@@ -17,7 +17,7 @@ export class AppComponent {
     //     this.courses = courses;
     //     console.log(this.courses);
     //   })
-    
+
     // AngularFire2 5.0 version
     db.list('courses')
       .valueChanges()
