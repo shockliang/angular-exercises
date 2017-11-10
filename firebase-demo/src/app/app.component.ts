@@ -10,8 +10,18 @@ import { Subscription } from 'rxjs/Subscription';
 })
 export class AppComponent {
   courses$;
+  course$;
+  author$;
 
   constructor(db: AngularFireDatabase) {
     this.courses$ = db.list('courses').valueChanges();
+    this.course$ = db.object('/courses/1')
+      .snapshotChanges()
+      .map(action => {
+        const $key = action.payload.key;
+        const data = action.payload.toJSON();
+        return data;
+      });
+    this.author$ = db.object('/authors/1').snapshotChanges();
   }
 }
