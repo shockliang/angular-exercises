@@ -1,11 +1,5 @@
-<ul>
-  <li>{{ (author$ | async)?.name }}</li>
-  <li>{{ (author$ | async)?.students }}</li>
-  <li>{{ (author$ | async)?.isPremium }}</li>
-</ul>
-
-<!-- <ul *ngIf="(author$ | async) as author">
+<ul *ngIf="(author$ | async) as author">
   <li>{{ author.name }}</li>
   <li>{{ author.students }}</li>
   <li>{{ author.isPremium }}</li>
-</ul> -->
+</ul>
