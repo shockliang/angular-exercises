@@ -15,13 +15,8 @@ export class AppComponent {
 
   constructor(db: AngularFireDatabase) {
     this.courses$ = db.list('courses').valueChanges();
-    this.course$ = db.object('/courses/1')
-      .snapshotChanges()
-      .map(action => {
-        const $key = action.payload.key;
-        const data = action.payload.toJSON();
-        return data;
-      });
-    this.author$ = db.object('/authors/1').snapshotChanges();
+    this.author$ = db.object('/authors/1').valueChanges();
+
+    console.log(this.author$);
   }
 }
