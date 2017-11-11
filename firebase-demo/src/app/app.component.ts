@@ -9,14 +9,27 @@ import { Subscription } from 'rxjs/Subscription';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  courses$;
-  course$;
-  author$;
+  coursesRef: AngularFireList<any>;
+  courses$: Observable<any[]>;
 
   constructor(db: AngularFireDatabase) {
-    this.courses$ = db.list('courses').valueChanges();
-    this.author$ = db.object('/authors/1').valueChanges();
+    this.coursesRef = db.list('courses');
+    this.courses$ = this.coursesRef.valueChanges();
 
-    console.log(this.author$);
+  }
+
+  add(course: HTMLInputElement) {
+    // this.coursesRef.push(course.value);
+    this.coursesRef.push({
+      name: course.value,
+      price: 150,
+      isLive: true,
+      sections: [
+        { title: 'Components' },
+        { title: 'Directives' },
+        { title: 'Template' },
+      ]
+    })
+    course.value = '';
   }
 }
