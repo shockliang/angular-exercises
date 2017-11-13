@@ -30,4 +30,9 @@ export class AppComponent {
     console.log(course);
     this.coursesRef.set(course.key, course.value + ' UPDATED');
   }
+
+  delete(course) {
+    this.coursesRef.remove(course.key)
+      .then(x => console.log('Delete'));
+  }
 }
