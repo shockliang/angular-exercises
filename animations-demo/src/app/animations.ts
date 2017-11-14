@@ -9,13 +9,12 @@ export let fade = trigger('fade', [
 ]);
 
 export let slide = trigger('slide', [
-    state('void', style({ transform: 'translateX(-20px)' })),
-    
-    transition('void => *', [
+    transition(':enter', [
+        style({ transform: 'translateX(-10px)' }),
         animate(250),
     ]),
 
-    transition('* => void', [
-        animate(100, style({ transform: 'translateX(-1000px)' }))
+    transition(':leave', [
+        animate(500, style({ transform: 'translateX(-100%)' }))
     ]),
 ]);
