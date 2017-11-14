@@ -7,3 +7,15 @@ export let fade = trigger('fade', [
         animate(500)
     ]),
 ]);
+
+export let slide = trigger('slide', [
+    state('void', style({ transform: 'translateX(-20px)' })),
+    
+    transition('void => *', [
+        animate(250),
+    ]),
+
+    transition('* => void', [
+        animate(100, style({ transform: 'translateX(-1000px)' }))
+    ]),
+]);
