@@ -1,18 +1,12 @@
 import { Component } from '@angular/core';
-import { transition, trigger, style, animate, state } from '@angular/animations';
+import { fade } from 'app/animations';
 
 @Component({
   selector: 'todos',
   templateUrl: './todos.component.html',
   styleUrls: ['./todos.component.css'],
   animations: [
-    trigger('fade', [
-      state('void', style({ opacity: 0 })),
-
-      transition(':enter, :leave', [  // void <=> *
-        animate(500)
-      ]),
-    ])
+    fade
   ]
 })
 
