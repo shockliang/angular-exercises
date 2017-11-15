@@ -19,18 +19,28 @@ export let fadeInAnimation = animation([
   style({ opacity: 0 }),
   animate('{{ duration }} {{ easing }}')
 ], {
-  params: {
-    duration: '2s',
-    easing: 'ease-out'
-  }
-});
+    params: {
+      duration: '2s',
+      easing: 'ease-out'
+    }
+  });
+
+export let fadeOutAnimation = animation([
+  style({ opacity: 0 }),
+  animate('{{ duration}} {{ easing }}')
+], {
+    params: {
+      duration: '2s',
+      easing: 'ease-out'
+    }
+  })
 
 export let fade = trigger('fade', [
   transition(':enter', [
     useAnimation(fadeInAnimation)
   ]),
   transition(':leave',
-    animate(500, style({ opacity: 0 }))
+    useAnimation(fadeOutAnimation)
   ),
 ]);
 
