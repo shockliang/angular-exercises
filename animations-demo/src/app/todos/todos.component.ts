@@ -1,12 +1,23 @@
+import { trigger, state, style, transition, animate, keyframes, useAnimation } from "@angular/animations";
 import { Component } from '@angular/core';
-import { slide } from 'app/animations';
+import { slide, bounceOutLeftAnimation } from 'app/animations';
 
 @Component({
   selector: 'todos',
   templateUrl: './todos.component.html',
   styleUrls: ['./todos.component.css'],
   animations: [
-    slide
+    trigger('todoAnimation',[
+      transition(':enter', [
+        style({ opacity: 0}),
+        animate(2000)
+      ]),
+      transition(':leave',[
+        style({ backgroundColor: 'red' }),
+        animate(1000),
+        useAnimation(bounceOutLeftAnimation)
+      ]),
+    ])
   ]
 })
 
