@@ -13,12 +13,6 @@ import { trigger, state, style, transition, animate, keyframes, useAnimation, qu
         paddingBottom: 0,
         overflow: 'hidden',
       })),
-      
-      state('expanded', style({
-        height: '*',
-        padding: '*',
-        overflow: 'auto'
-      })),
 
       transition('collapsed => expanded', [
         animate('300ms ease-out')
