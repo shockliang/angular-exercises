@@ -1,17 +1,9 @@
-<mat-input-container class="example-form">
+<mat-input-container>
   <input
-    class="example-full-width"
-    #username="ngModel" 
-    ngModel name="username" 
-    matInput placeholder="Username" 
-    required>
-  <mat-hint>Type a unique username</mat-hint>
-  <span matSuffix>@domain.com</span>
-  <span matPrefix>admin.</span>
-  <mat-error *ngIf="username.invalid && username.errors.required">
-    The username filed is required.
-  </mat-error>
+    (focus)="birthdate.open()"
+    [min]="minDate"
+    [max]="maxDate" 
+    type="text" matInput [matDatepicker]="birthdate"/>
+  <mat-datepicker-toggle matSuffix [for]="birthdate"></mat-datepicker-toggle>
 </mat-input-container>
-<mat-input-container class="example-form">
-    <textarea matInput matTextareaAutosize rows="5"></textarea>
-</mat-input-container>
+<mat-datepicker #birthdate touchUi="true"></mat-datepicker>

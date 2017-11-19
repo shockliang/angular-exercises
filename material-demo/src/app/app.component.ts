@@ -6,17 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  isChecked = true;
-  color = 2;
-
-  colors = [
-    {id: 1, name: 'Red'},
-    {id: 2, name: 'Green'},
-    {id: 3, name: 'Blue'}
-  ]
-
-  onChange($event) {
-    console.log($event);
-  }
+  minDate = new Date(2017, 3, 1);
+  maxDate = new Date(2017, 11, 1);
 }
