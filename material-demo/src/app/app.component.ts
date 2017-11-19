@@ -6,17 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  categories = [
-    { name: 'Beginer' },
-    { name: 'Intermediate' },
-    { name: 'Advanced' },
-  ];
+  progress = 0;
+  timer;
 
-  selectCategory(category) {
-    this.categories
-      .filter(c => c != category)
-      .forEach(c => c['selected'] = false);
-      
-    category.selected = !category.selected;
+  constructor() {
+    this.timer = setInterval(() => {
+      this.progress++;
+      if (this.progress == 100) clearInterval(this.timer)
+    }, 20);
   }
 }
