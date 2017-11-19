@@ -1,6 +1,7 @@
-<button mat-button>Click me!</button>
-<button color="primary" mat-raised-button>Primary</button>
-<button color="accent" mat-raised-button>Accent</button>
-<button color="warn" mat-raised-button>Warn</button>
-<button color="primary" mat-fab><mat-icon>check</mat-icon></button>
-
+<mat-chip-list>
+  <mat-chip
+    *ngFor="let category of categories"
+    (click)="selectCategory(category)"
+    [selected]="category.selected"
+    >{{ category.name }}</mat-chip>
+</mat-chip-list>
