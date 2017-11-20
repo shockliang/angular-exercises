@@ -20,6 +20,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import { EditCourseComponent } from './edit-course/edit-course.component';
+import { CourseService } from './course.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,10 @@ import { EditCourseComponent } from './edit-course/edit-course.component';
     MatTabsModule,
     MatDialogModule
   ],
-  providers: [],
+  providers: [
+    CourseService,
+    { provide: CourseService, useClass: CourseService },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
