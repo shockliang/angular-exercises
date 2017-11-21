@@ -1,9 +1,13 @@
-$color: green;
-
-h1 {
-  color: $color;
+@mixin soft-border($border-radius) {
+  border: 1px solid #ccc;
+  border-radius: $border-radius;
+  padding: 10px;
 }
 
-h2 {
-  color: $color;
+.box {
+  @include soft-border(5px);
+}
+
+.modern-box {
+  @include soft-border(10px);
 }
