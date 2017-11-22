@@ -2,17 +2,11 @@ import { IAppState } from './store';
 import { INCREMENT } from "./actions";
 
 export const INITIAL_STATE: IAppState = {
-  counter: 0,
-  messaging: {
-    newMessages: 5
-  }
+  counter: 0
 }
 
 export interface IAppState {
   counter: number;
-  messaging?: {
-    newMessages: number;
-  }
 }
 
 export function rootReducer(state: IAppState, action): IAppState {
