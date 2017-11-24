@@ -1,7 +1,8 @@
+import { IAppState } from './../../store';
 import { Component } from '@angular/core';
 import { NgRedux, select } from '@angular-redux/store'; 
-import { IAppState } from '../../store'; 
-import { CLEAR_TODOS } from '../../actions'; 
+import { ITaskingState } from '../store'; 
+import { CLEAR_TODOS } from '../actions'; 
 
 @Component({
   selector: 'app-todo-dashboard',
@@ -9,8 +10,8 @@ import { CLEAR_TODOS } from '../../actions';
   styleUrls: ['./todo-dashboard.component.css']
 })
 export class TodoDashboardComponent {
-  @select() todos; 
-  @select() lastUpdate; 
+  @select(s => s.tasking.todos) todos; 
+  @select(s => s.tasking.lastUpdate) lastUpdate; 
   
   constructor(private ngRedux: NgRedux<IAppState>) {
   }
