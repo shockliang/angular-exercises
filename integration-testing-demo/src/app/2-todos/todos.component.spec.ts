@@ -14,11 +14,11 @@ describe('TodosComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports:[ HttpModule ],
-      declarations: [ TodosComponent ],
-      providers: [ TodoService ]
+      imports: [HttpModule],
+      declarations: [TodosComponent],
+      providers: [TodoService]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -26,12 +26,15 @@ describe('TodosComponent', () => {
     component = fixture.componentInstance;
   });
 
-  it('should load todos from the server', () => {
+  it('should load todos from the server', async(() => {
     let service = TestBed.get(TodoService);
-    spyOn(service, 'getTodos').and.returnValue(Observable.from([[1, 2, 3]]));
+    spyOn(service, 'getTodosPromise').and.returnValue(Promise.resolve([1, 2, 3]));
 
     fixture.detectChanges();
 
-    expect(component.todos.length).toBe(3);
-  });
+    fixture.whenStable().then(() => {
+      expect(component.todos.length).toBe(3);
+    })
+
+  }));
 });
