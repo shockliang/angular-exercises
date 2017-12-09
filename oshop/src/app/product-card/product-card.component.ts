@@ -21,5 +21,8 @@ export class ProductCardComponent {
           localStorage.setItem('cartId', result.key);
         });
     }
+    else {
+      
+    }
   }
 }
