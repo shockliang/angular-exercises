@@ -1,6 +1,6 @@
 import { AppUser } from '../shared/models/app-user';
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../shared/services/auth.service';
 import { ShoppingCartService } from '../shopping-cart.service';
 import { Observable } from 'rxjs/Observable';
 import { ShoppingCart } from '../shared/models/shopping-cart';

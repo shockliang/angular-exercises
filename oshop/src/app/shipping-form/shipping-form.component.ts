@@ -1,7 +1,7 @@
 import { Subscription } from 'rxjs/Subscription';
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../shared/services/auth.service';
 import { OrderService } from '../order.service';
 import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
 import { Order } from '../shared/models/order';
