@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { OrderService } from '../order.service';
 import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
-import { Order } from '../models/order';
-import { ShoppingCart } from '../models/shopping-cart';
+import { Order } from '../shared/models/order';
+import { ShoppingCart } from '../shared/models/shopping-cart';
 
 @Component({
   selector: 'shipping-form',
