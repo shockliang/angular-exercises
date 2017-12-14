@@ -1,6 +1,6 @@
 import { ShoppingCart } from '../shared/models/shopping-cart';
 import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
-import { ShoppingCartService } from './../shopping-cart.service';
+import { ShoppingCartService } from '../shared/services/shopping-cart.service';
 import { Product } from '../shared/models/product';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../shared/services/product.service';
