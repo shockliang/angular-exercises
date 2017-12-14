@@ -3,7 +3,7 @@ import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
 import { ShoppingCartService } from './../shopping-cart.service';
 import { Product } from '../shared/models/product';
 import { ActivatedRoute } from '@angular/router';
-import { ProductService } from './../product.service';
+import { ProductService } from '../shared/services/product.service';
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import 'rxjs/add/operator/switchMap';
