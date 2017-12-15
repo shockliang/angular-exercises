@@ -1,6 +1,6 @@
-import { Product } from '../../shared/models/product';
+import { Product } from '../../../shared/models/product';
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../../shared/services/product.service';
+import { ProductService } from '../../../shared/services/product.service';
 import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
 import { Subscription } from 'rxjs/Subscription';
 import { DataTableResource } from 'angular-4-data-table';
