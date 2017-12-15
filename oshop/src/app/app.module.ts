@@ -28,6 +28,7 @@ import { ShippingFormComponent } from './shipping-form/shipping-form.component';
 import { ShoppingCartSummaryComponent } from './shopping-cart-summary/shopping-cart-summary.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { SharedModule } from 'shared/shared.module';
+import { AdminModule } from 'app/admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -39,10 +40,7 @@ import { SharedModule } from 'shared/shared.module';
     CheckOutComponent,
     OrderSuccessComponent,
     MyOrdersComponent,
-    AdminProductsComponent,
-    AdminOrdersComponent,
     LoginComponent,
-    ProductFormComponent,
     ProductFilterComponent,
     ShoppingCartSummaryComponent,
     ShippingFormComponent
@@ -50,9 +48,9 @@ import { SharedModule } from 'shared/shared.module';
   imports: [
     BrowserModule,
     SharedModule,
+    AdminModule,
     FormsModule,
     CustomFormsModule,
-    DataTableModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
