@@ -20,7 +20,7 @@ import { CheckOutComponent } from './shopping/components/check-out/check-out.com
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MyOrdersComponent } from './shopping/components/my-orders/my-orders.component';
-import { OrderSuccessComponent } from './order-success/order-success.component';
+import { OrderSuccessComponent } from './shopping/components/order-success/order-success.component';
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 import { ProductsComponent } from './products/products.component';
 import { AuthGuard } from './shared/services/auth-guard.service';
