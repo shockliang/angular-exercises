@@ -26,7 +26,7 @@ import { ProductsComponent } from './shopping/components/products/products.compo
 import { AuthGuard } from './shared/services/auth-guard.service';
 import { ShippingFormComponent } from './shopping/components/shipping-form/shipping-form.component';
 import { ShoppingCartSummaryComponent } from './shopping-cart-summary/shopping-cart-summary.component';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ShoppingCartComponent } from './shopping/components/shopping-cart/shopping-cart.component';
 import { SharedModule } from 'shared/shared.module';
 import { AdminModule } from 'app/admin/admin.module';
 
