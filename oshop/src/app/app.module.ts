@@ -24,7 +24,7 @@ import { OrderSuccessComponent } from './shopping/components/order-success/order
 import { ProductFilterComponent } from './shopping/components/products/product-filter/product-filter.component';
 import { ProductsComponent } from './shopping/components/products/products.component';
 import { AuthGuard } from './shared/services/auth-guard.service';
-import { ShippingFormComponent } from './shipping-form/shipping-form.component';
+import { ShippingFormComponent } from './shopping/components/shipping-form/shipping-form.component';
 import { ShoppingCartSummaryComponent } from './shopping-cart-summary/shopping-cart-summary.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { SharedModule } from 'shared/shared.module';
