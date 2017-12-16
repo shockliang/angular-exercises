@@ -17,8 +17,8 @@ import { ProductFormComponent } from './admin/components/product-form/product-fo
 import { AppComponent } from './app.component';
 import { BsNavbarComponent } from './core/components/bs-navbar/bs-navbar.component';
 import { CheckOutComponent } from './shopping/components/check-out/check-out.component';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './core/components/home/home.component';
+import { LoginComponent } from './core/components/login/login.component';
 import { MyOrdersComponent } from './shopping/components/my-orders/my-orders.component';
 import { OrderSuccessComponent } from './shopping/components/order-success/order-success.component';
 import { ProductFilterComponent } from './shopping/components/products/product-filter/product-filter.component';
