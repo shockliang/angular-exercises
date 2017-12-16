@@ -15,7 +15,7 @@ import { AdminOrdersComponent } from './admin/components/admin-orders/admin-orde
 import { AdminProductsComponent } from './admin/components/admin-products/admin-products.component';
 import { ProductFormComponent } from './admin/components/product-form/product-form.component';
 import { AppComponent } from './app.component';
-import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
+import { BsNavbarComponent } from './core/components/bs-navbar/bs-navbar.component';
 import { CheckOutComponent } from './shopping/components/check-out/check-out.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
